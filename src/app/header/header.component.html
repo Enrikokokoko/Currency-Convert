@@ -1,0 +1,11 @@
+<div class="header">
+  <p class="title">Fast currency</p>
+  @for(currency of currencyInfo; track currency) {
+  <div class="currency-block">
+    <p class="value">
+      {{ currency.CurrencyCodeL }}
+      <span class="amount">{{ currency.Amount }}</span>
+    </p>
+  </div>
+  }
+</div>

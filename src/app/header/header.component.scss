@@ -1,0 +1,46 @@
+:host {
+  font-family: sans-serif;
+
+  .header {
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 50px;
+    background: linear-gradient(
+      white,
+      #d9d7ff,
+    );
+    box-shadow: 0px 1px 7px gray;
+  }
+  
+  .currency-block {
+    height: 35px;
+    width: 90px;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 1px 1px 0px grey;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid black;
+  }
+  
+  .currency-block:hover {
+    box-shadow: 1px 1px 5px grey;
+  }
+  
+  .title {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .value {
+    font-size: 15px;
+  }
+  
+  .amount {
+    color: rgb(10, 10, 112)
+  }
+}

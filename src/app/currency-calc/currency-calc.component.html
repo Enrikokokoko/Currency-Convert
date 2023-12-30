@@ -1,0 +1,55 @@
+<div class="main">
+  <p class="title">Currency Convert</p>
+  <div class="frames">
+    <div class="frames__block">
+      <p class="direct">Amount</p>
+      <div class="frames__container">
+        <input
+          type="text"
+          class="input"
+          placeholder="0.00"
+          [(ngModel)]="firstNumber"
+          (keypress)="allowedSymbol($event)"
+          (ngModelChange)="inputFirstValue($event)"
+        />
+        <select
+          class="list"
+          [(ngModel)]="firstCurrency"
+          (change)="firstSelectedCurrency($event)"
+        >
+          @for(currency of this.currencyInfo; track currency) {
+          <option>{{ currency.CurrencyCodeL }}</option>
+          }
+        </select>
+      </div>
+      <div class="compare-block">
+        1 {{ firstCurrency }} = {{ firstTransfer }} {{ secondCurrency }}
+      </div>
+    </div>
+    <div class="frames__block">
+      <p class="direct">Converted to</p>
+      <div class="frames__container">
+        <input
+          type="text"
+          class="input"
+          placeholder="0.00"
+          [(ngModel)]="secondNumber"
+          (keypress)="allowedSymbol($event)"
+          (ngModelChange)="inputSecondValue($event)"
+        />
+        <select
+          class="list"
+          (ngModel)="(secondCurrency)"
+          (change)="secondSelectedCurrency($event)"
+        >
+          @for(currency of this.currencyInfo; track currency) {
+          <option>{{ currency.CurrencyCodeL }}</option>
+          }
+        </select>
+      </div>
+      <div class="compare-block">
+        1 {{ secondCurrency }} = {{ secondTransfer }} {{ firstCurrency }}
+      </div>
+    </div>
+  </div>
+</div>
